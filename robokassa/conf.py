@@ -26,5 +26,8 @@ if TEST_MODE:
         u'http://test.robokassa.ru/Index.aspx'
     )
 
+# валюта платежа
+CURRENCY = getattr(settings, 'ROBOKASSA_CURRENCY', False)
+
 # список пользовательских параметров ("shp" к ним приписывать не нужно)
 EXTRA_PARAMS = sorted(getattr(settings, 'ROBOKASSA_EXTRA_PARAMS', []))
